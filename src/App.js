@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import styled from "styled-components";
 import ButtonTest from "./components/ButtonTest/ButtonTest";
 import Div from "./components/Div/Div";
@@ -17,10 +18,16 @@ const AppContainer = styled.div`
 
 function App() {
 	return (
-		<AppContainer>
-			<Div />
-			<ButtonTest />
-		</AppContainer>
+		<>
+			<Helmet>
+				<title>TITLE USANDO HELMET</title>
+				<meta name='description' content='CONTENT EN HELMET' />
+			</Helmet>
+			<AppContainer>
+				<Div />
+				<ButtonTest />
+			</AppContainer>
+		</>
 	);
 }
 
