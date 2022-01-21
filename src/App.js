@@ -22,6 +22,7 @@ function App() {
 			<Helmet>
 				<title>TITLE USANDO HELMET</title>
 				<meta name='description' content='CONTENT EN HELMET' />
+				<link rel='canonical' href='' />
 			</Helmet>
 			<AppContainer>
 				<Div />
