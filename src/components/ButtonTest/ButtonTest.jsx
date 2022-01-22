@@ -2,12 +2,21 @@ import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const Button = styled.button`
-	padding: 5px;
+	padding: 15px;
 	color: white;
 	border: 1px solid white;
 	background-color: black;
 	border-radius: 5px;
 	text-decoration: none;
+	transition: all 0.5s ease-in;
+
+	&:hover {
+		cursor: pointer;
+		width: 150px;
+		background-color: lime;
+		color: black;
+		transition: all 0.5s ease-in;
+	}
 `;
 
 const Counter = styled.span`
