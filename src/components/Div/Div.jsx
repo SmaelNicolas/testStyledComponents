@@ -11,6 +11,14 @@ const spin = keyframes`
 const spinBack = keyframes`
 	100%{transform:rotate(-360deg)};
 `;
+
+const moveLnR = keyframes`
+0%{align-self:center;};
+50%{
+	align-self:end;
+}
+100%{align-self:start}`;
+
 const DivHola = styled.div`
 	width: 100px;
 	height: 100px;
@@ -46,6 +54,11 @@ const DivConProps = styled(DivHola)`
 	color: ${({ color }) => color || "green"};
 	font-size: 30px;
 	background-color: ${({ bgc }) => bgc || "pink"};
+	animation: ${moveLnR} 1s linear infinite;
+
+	&:hover {
+		animation: none;
+	}
 `;
 
 function Div() {
